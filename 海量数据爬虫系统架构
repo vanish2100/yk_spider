@@ -65,6 +65,27 @@ Scrapy主要组件
 8、调度中间件(Scheduler Middewares): 介于Scrapy引擎和调度之间的中间件，从Scrapy引擎发送到调度的请求和响应。
 
 
+主要文件的作用：
+scrapy.cfg：项目的配置文件
+tutorial/：项目的Python模块，将会从这里引用代码
+tutorial/items.py：项目的字段定义文件
+tutorial/pipelines.py：项目的管道文件
+tutorial/settings.py：项目的设置文件
+tutorial/spiders/：存储爬虫代码目录
+
+xpath解析网页,抽取关键信息
+(1) //div[@class="listleft"]/ul/li/h3/a/@href
+表示选择所有含有属性class等于listleft的dev元素下方的ul->li->h3下方a标签的herf属性，取列表页所有内容页url。
+(2) //div[@class="hd"]/h1/text()
+表示选择所有含有属性class等于hd的dev元素下方的h1标签，取文章标题。
+(3) //div[@class="photoarea"]//p/text()|//div[@class="contentBox
+cf"]//p/text() 同上，由于网页中存在多种不同的页面结构，需要兼容，故使用“|”语法，表示或的意思，取文章正文。
+(4) //span[@class="article-time"]/text() 语法同上，取文章的发布时间。
+
+
+
+
+
 
 
 
