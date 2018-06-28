@@ -8,3 +8,6 @@ https://github.com/Nyloner/Nyspider
 
 主流的开源搜索框架
 Nutch、Crawler4j、WebMagic、scrapy、WebCollector
+
+webmagic
+
